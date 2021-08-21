@@ -217,7 +217,7 @@ L Transformer:ADT2-71T TR1
 U 1 1 61005B45
 P 6350 3900
 F 0 "TR1" H 6350 4281 50  0000 C CNN
-F 1 "ADT2-71T" H 6350 4190 50  0000 C CNN
+F 1 "ADT2-71T+" H 6350 4190 50  0000 C CNN
 F 2 "RF_Mini-Circuits:Mini-Circuits_CD637_H5.23mm" H 6350 3550 50  0001 C CNN
 F 3 "https://www.minicircuits.com/pdfs/ADT2-71T+.pdf" H 6350 3900 50  0001 C CNN
 	1    6350 3900
@@ -647,54 +647,54 @@ Wire Wire Line
 	10650 1950 10650 2100
 Connection ~ 10650 1950
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H1
 U 1 1 611A79AF
 P 4350 5650
-F 0 "H?" H 4450 5699 50  0000 L CNN
+F 0 "H1" H 4450 5699 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4450 5608 50  0000 L CNN
-F 2 "" H 4350 5650 50  0001 C CNN
+F 2 "wbraun_smd:M3-tight-fit-socket-head" H 4350 5650 50  0001 C CNN
 F 3 "~" H 4350 5650 50  0001 C CNN
 	1    4350 5650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H2
 U 1 1 611A7CBD
 P 4350 6000
-F 0 "H?" H 4450 6049 50  0000 L CNN
+F 0 "H2" H 4450 6049 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4450 5958 50  0000 L CNN
-F 2 "" H 4350 6000 50  0001 C CNN
+F 2 "wbraun_smd:M3-tight-fit-socket-head" H 4350 6000 50  0001 C CNN
 F 3 "~" H 4350 6000 50  0001 C CNN
 	1    4350 6000
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H3
 U 1 1 611A8393
 P 4350 6350
-F 0 "H?" H 4450 6399 50  0000 L CNN
+F 0 "H3" H 4450 6399 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4450 6308 50  0000 L CNN
-F 2 "" H 4350 6350 50  0001 C CNN
+F 2 "wbraun_smd:M3-tight-fit-socket-head" H 4350 6350 50  0001 C CNN
 F 3 "~" H 4350 6350 50  0001 C CNN
 	1    4350 6350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H4
 U 1 1 611A8616
 P 4350 6700
-F 0 "H?" H 4450 6749 50  0000 L CNN
+F 0 "H4" H 4450 6749 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4450 6658 50  0000 L CNN
-F 2 "" H 4350 6700 50  0001 C CNN
+F 2 "wbraun_smd:M3-tight-fit-socket-head" H 4350 6700 50  0001 C CNN
 F 3 "~" H 4350 6700 50  0001 C CNN
 	1    4350 6700
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0134
 U 1 1 611A88B0
 P 4050 7000
-F 0 "#PWR?" H 4050 6750 50  0001 C CNN
+F 0 "#PWR0134" H 4050 6750 50  0001 C CNN
 F 1 "GND" H 4055 6827 50  0000 C CNN
 F 2 "" H 4050 7000 50  0001 C CNN
 F 3 "" H 4050 7000 50  0001 C CNN
