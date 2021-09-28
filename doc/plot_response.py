@@ -6,6 +6,7 @@ from matplotlib.patches import ConnectionPatch
 
 import pandas
 
+
 dm_l_file_name = "measurements/l_dm.csv"
 dm_n_file_name = "measurements/n_dm.csv"
 cm_cm_file_name = "measurements/cm_cm.csv"
@@ -13,6 +14,7 @@ cm_dm_file_name = "measurements/cm_dm.csv"
 
 l_impedance_file_name = "measurements/l_impedance.csv"
 n_impedance_file_name = "measurements/n_impedance.csv"
+cispr_impedance_file_name = "cispr16_impedances.csv"
 
 file_data = pandas.read_csv(cm_dm_file_name, sep=',', skiprows=13, header=None)
 freq_cm_dm = file_data[0].to_numpy()
@@ -102,10 +104,29 @@ n_phase = np.angle(n_r + 1.0j * n_z, deg=True)
 
 fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
 
+
+file_data = pandas.read_csv(cispr_impedance_file_name, sep=',', skiprows=1, header=None)
+cispr_freq = file_data[0].to_numpy()
+cispr_impedance = file_data[1].to_numpy()
+cispr_phase = file_data[2].to_numpy()
+print(cispr_freq)
+
+cispr_impedance_lower = cispr_impedance * 0.8
+cispr_impedance_upper = cispr_impedance * 1.2
+
+cispr_phase_lower = cispr_phase - 11.5
+cispr_phase_upper = cispr_phase + 11.5 
+
 ax1.plot(freq_l_impedance, l_abs_z, color="olivedrab", alpha=0.9, label="Line")
 ax1.plot(freq_n_impedance, n_abs_z, color="coral", alpha=0.9, label="Neutral")
+ax1.plot(cispr_freq, cispr_impedance_lower, color="red", alpha=1, label="CISPR Limit")
+ax1.plot(cispr_freq, cispr_impedance_upper, color="red", alpha=1)
+
 ax2.plot(freq_l_impedance, l_phase, color="olivedrab", alpha=0.9, label="Line")
 ax2.plot(freq_n_impedance, n_phase, color="coral", alpha=0.9, label="Neutral")
+ax2.plot(cispr_freq, cispr_phase_upper, color="red", alpha=1, linewidth=1, label="CISPR Limit")
+ax2.plot(cispr_freq, cispr_phase_lower, color="red", alpha=1, linewidth= 1, label="CISPR Limit")
+
 
 
 #ax.set_ylim([-12,-8])
